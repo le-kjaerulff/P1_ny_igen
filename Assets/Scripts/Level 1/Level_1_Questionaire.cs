@@ -6,83 +6,117 @@ using UnityEngine;
 public class Level_1_Questionaire : MonoBehaviour
 {
 
+    [SerializeField] AudioSource audioPlayer;
+    [SerializeField] AudioClip[] audioClipArray;
+
     [SerializeField] string[] whatAnimal = new string[3]; 
     int rightAnswer;
     int userAnswer;
 
-    bool cowWasPicked;
-    bool pigWasPicked;
-    bool sheepWasPicked;
+
+    bool cowOnPlate;
+    bool pigOnPlate;
+    bool sheepOnPlate;
+
+    public GameManager gameManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        AskQuestion();
        
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        AskQuestion();
+      
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        cowWasPicked |= Input.GetKeyDown(KeyCode.K);
-        pigWasPicked |= Input.GetKeyDown(KeyCode.G);
-        sheepWasPicked |= Input.GetKeyDown(KeyCode.F);
+        cowOnPlate |= Input.GetKeyDown(KeyCode.LeftArrow);
+        pigOnPlate |= Input.GetKeyDown(KeyCode.UpArrow);
+        sheepOnPlate |= Input.GetKeyDown(KeyCode.RightArrow);
 
     }
 
     private void FixedUpdate()
     {
-        if (cowWasPicked)
+        if (cowOnPlate)
         {
-            userAnswer = 0;
-            if (userAnswer == rightAnswer)
-            {
-                Debug.Log("GG");
-               
-            }
-            Debug.LogFormat("User answer: {0}", userAnswer);
-            Debug.LogFormat("Right answer: {0}", rightAnswer);
-            AskQuestion();
+            CowWasPicked();
         }
 
-        if (pigWasPicked)
+        if (pigOnPlate)
         {
-            userAnswer = 1;
-            if (userAnswer == rightAnswer)
-            {
-                Debug.Log("GG");
-             
-            }
-            Debug.LogFormat("User answer: {0}", userAnswer);
-            Debug.LogFormat("Right answer: {0}", rightAnswer);
-            AskQuestion();
+            PigWasPicked();
         }
 
-        if (sheepWasPicked)
+        if (sheepOnPlate)
         {
-            userAnswer = 2;
-            if (userAnswer == rightAnswer)
-            {
-                Debug.Log("GG");
-            }
-            Debug.LogFormat("User answer: {0}", userAnswer);
-            Debug.LogFormat("Right answer: {0}", rightAnswer);
-            AskQuestion();
+            SheepWasPicked();
         }
-
-        cowWasPicked = false;
-        pigWasPicked = false;
-        sheepWasPicked = false; 
+        cowOnPlate = false;
+        pigOnPlate = false;
+        sheepOnPlate = false;
     }
 
         public void AskQuestion()
     {
-        rightAnswer = (int)Random.Range(0, 3);
+
+        rightAnswer = (int)Random.Range(0, 3);   
+        audioPlayer.clip = audioClipArray[rightAnswer];
+        audioPlayer.PlayOneShot(audioClipArray[3]);
+        audioPlayer.PlayDelayed(audioClipArray[3].length);       
+        
         Debug.LogFormat("Pick the {0}", whatAnimal[rightAnswer]);
+       
     }
 
+    void CowWasPicked()
+    {
+        userAnswer = 0;
 
+        if (userAnswer == rightAnswer)
+        {
+            Debug.Log("GG");
+            gameManager.score += 1;
+        }
+        else
+        {
+            gameManager.numberOfErrorsInSet += 1;
+        }
+        gameManager.questionNumberInSet += 1;
+        AskQuestion();
+    }
+    
+    void PigWasPicked()
+    {
+        userAnswer = 1;
+
+
+        if (userAnswer == rightAnswer)
+        {
+            Debug.Log("GG");
+            gameManager.score += 1;
+        }
+        gameManager.questionNumberInSet += 1;
+        AskQuestion();
+    }
+
+    void SheepWasPicked()
+    {
+        userAnswer = 2;
+
+        if (userAnswer == rightAnswer)
+        {
+            Debug.Log("GG");
+            gameManager.score += 1;
+        }
+        gameManager.questionNumberInSet += 1;
+        AskQuestion();
+    }
 
 }
+
+
