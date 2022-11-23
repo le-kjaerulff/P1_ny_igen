@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                
                 difficulty += 1;
                 Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(1);
             }
         }
 
