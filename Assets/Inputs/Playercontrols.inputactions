@@ -1,0 +1,85 @@
+{
+    "name": "Playercontrols",
+    "maps": [
+        {
+            "name": "InGame",
+            "id": "72df6ec2-dd22-4830-b6d0-612f49220554",
+            "actions": [
+                {
+                    "name": "TouchObjectA",
+                    "type": "Value",
+                    "id": "da8a7165-2cb1-435b-a558-3d1a794c2586",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TouchObjectB",
+                    "type": "Value",
+                    "id": "4069f2cd-b673-476b-a5fe-4cdee9295b42",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TouchObjectC",
+                    "type": "Value",
+                    "id": "730139c9-6867-4e11-a79d-d9e56db4408d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a2b65710-911d-4cee-b5c1-e7066088201e",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchObjectA",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "561dce11-346b-4cc1-9b73-281704314a0a",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchObjectB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34c68edb-fdb7-4dc2-a389-4b2d69daef49",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchObjectB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aeb80dd1-5703-4d2d-999a-23dd10e83c24",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TouchObjectC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
