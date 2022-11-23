@@ -80,7 +80,7 @@ public class Level_1_Questionaire : MonoBehaviour
         public void AskQuestion()
     {
         rightAnswer = (int)Random.Range(0, 3);
-        Debug.LogFormat("Vælg {0}", whatAnimal[rightAnswer]);
+        Debug.LogFormat("Pick the {0}", whatAnimal[rightAnswer]);
     }
 
 
