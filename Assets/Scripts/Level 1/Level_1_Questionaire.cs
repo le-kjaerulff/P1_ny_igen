@@ -12,7 +12,7 @@ public class Level_1_Questionaire : MonoBehaviour
 
     bool koenValgt;
     bool grisenValgt;
-    bool fåretValgt;
+    bool faaretValgt;
 
 
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class Level_1_Questionaire : MonoBehaviour
     {
         koenValgt |= Input.GetKeyDown(KeyCode.K);
         grisenValgt |= Input.GetKeyDown(KeyCode.G);
-        fåretValgt |= Input.GetKeyDown(KeyCode.F);
+        faaretValgt |= Input.GetKeyDown(KeyCode.F);
 
     }
 
@@ -60,7 +60,7 @@ public class Level_1_Questionaire : MonoBehaviour
             AskQuestion();
         }
 
-        if (fåretValgt)
+        if (faaretValgt)
         {
             userAnswer = 2;
             if (userAnswer == rightAnswer)
@@ -74,7 +74,7 @@ public class Level_1_Questionaire : MonoBehaviour
 
         koenValgt = false;
         grisenValgt = false;
-        fåretValgt = false; 
+        faaretValgt = false; 
     }
 
         public void AskQuestion()
