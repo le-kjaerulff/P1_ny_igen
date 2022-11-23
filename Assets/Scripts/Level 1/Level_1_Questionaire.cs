@@ -23,12 +23,9 @@ public class Level_1_Questionaire : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-       
+    {     
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         AskQuestion();
-      
-
     }
 
     // Update is called once per frame
@@ -80,7 +77,7 @@ public class Level_1_Questionaire : MonoBehaviour
         if (userAnswer == rightAnswer)
         {
             Debug.Log("GG");
-            gameManager.score += 1;
+            gameManager.playerScore += 1;
         }
         else
         {
@@ -98,7 +95,11 @@ public class Level_1_Questionaire : MonoBehaviour
         if (userAnswer == rightAnswer)
         {
             Debug.Log("GG");
-            gameManager.score += 1;
+            gameManager.playerScore += 1;
+        }
+        else
+        {
+            gameManager.numberOfErrorsInSet += 1;
         }
         gameManager.questionNumberInSet += 1;
         AskQuestion();
@@ -111,7 +112,11 @@ public class Level_1_Questionaire : MonoBehaviour
         if (userAnswer == rightAnswer)
         {
             Debug.Log("GG");
-            gameManager.score += 1;
+            gameManager.playerScore += 1;
+        }
+        else
+        {
+            gameManager.numberOfErrorsInSet += 1;
         }
         gameManager.questionNumberInSet += 1;
         AskQuestion();
