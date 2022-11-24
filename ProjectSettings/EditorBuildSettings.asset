@@ -5,13 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/Level 1.unity
+    guid: 1667a6e5159369346a581f5c5e7b4046
   - enabled: 1
-    path: Assets/Scenes/StartScreen.unity
-    guid: 9c70f59267f5649caab0eb9bdb2f3fa0
-  - enabled: 1
-    path: Assets/Scenes/Tutorialscene.unity
-    guid: 9baae649d2af847e7be9002ac56d2741
-  - enabled: 1
-    path: Assets/Scenes/Level 1 - Mikkel.unity
-    guid: 01f46fc2884af4bd8b26bc7416c416fe
+    path: Assets/Scenes/Level 2.unity
+    guid: ac08c58e729361043bb838cc6cabf87b
   m_configObjects: {}
