@@ -220,6 +220,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55733025cfd2def42a91338c8ecb4df3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalPlacements:
+  - {x: -3.1, y: -0.5}
+  - {x: 1, y: -0.5}
+  - {x: -3.45, y: 1.69}
 --- !u!1 &74565033
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,9 +252,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 737428387}
-  - {fileID: 1119877469}
-  - {fileID: 852141814}
+  - {fileID: 1206427246}
+  - {fileID: 297799424}
+  - {fileID: 1725422637}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -264,7 +268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80022562}
   - component: {fileID: 80022563}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +352,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137496956}
   - component: {fileID: 137496957}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141758288}
   - component: {fileID: 141758289}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178694948}
   - component: {fileID: 178694949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,6 +630,111 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &257249421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 257249422}
+  - component: {fileID: 257249424}
+  - component: {fileID: 257249423}
+  m_Layer: 8
+  m_Name: sheep sprite sheet_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &257249422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257249421}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725422637}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &257249423
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257249421}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5af41009b7144bc4a9d1d2579bb7e4a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &257249424
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 257249421}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1725274357
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 837416765, guid: 133a9c718828fad41a9a7ca1d61112b2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.764706, y: 3.764706}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &273764758
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +745,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273764759}
   - component: {fileID: 273764760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,6 +819,144 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &281125313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281125314}
+  - component: {fileID: 281125316}
+  - component: {fileID: 281125315}
+  m_Layer: 8
+  m_Name: sheep head_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &281125314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281125313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.5754466, y: -0.35322678, z: 0.37191027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1725422637}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &281125315
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281125313}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49fc9a79981d47a438a617a559ea2bad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &281125316
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281125313}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1725274357
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 805130555, guid: 12ef8feeb447a7c48afd74730a1942ed, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.764706, y: 3.764706}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &297799423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297799424}
+  m_Layer: 8
+  m_Name: Pig
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297799424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297799423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 884269533}
+  - {fileID: 702976649}
+  m_Father: {fileID: 74565034}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &318056274
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 318056275}
   - component: {fileID: 318056276}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +1051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 326547295}
   - component: {fileID: 326547296}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -888,7 +1135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330135705}
   - component: {fileID: 330135706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +1220,7 @@ GameObject:
   - component: {fileID: 388128234}
   - component: {fileID: 388128236}
   - component: {fileID: 388128235}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1132,7 +1379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 475432426}
   - component: {fileID: 475432427}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1262,7 +1509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 581928865}
   - component: {fileID: 581928866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637563715}
   - component: {fileID: 637563716}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1430,7 +1677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 669109107}
   - component: {fileID: 669109108}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,7 +1751,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &737428386
+--- !u!1 &702976648
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1512,37 +1759,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 737428387}
-  - component: {fileID: 737428388}
-  m_Layer: 0
-  m_Name: Cow
+  - component: {fileID: 702976649}
+  - component: {fileID: 702976651}
+  - component: {fileID: 702976650}
+  m_Layer: 8
+  m_Name: pig sprite sheet_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &737428387
+--- !u!4 &702976649
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737428386}
+  m_GameObject: {fileID: 702976648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.03, y: 0.09, z: 0.37191027}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 74565034}
-  m_RootOrder: 0
+  m_Father: {fileID: 297799424}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &737428388
+--- !u!95 &702976650
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702976648}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ef3ba28122ccdb84a84bbc326c6fb4e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &702976651
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 737428386}
+  m_GameObject: {fileID: 702976648}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -1574,15 +1842,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: a451842d3fd8b0f4b92164d9d7a3c726, type: 3}
+  m_SortingLayerID: -1725274357
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -2130560065, guid: 44badde1983c322498a62c60b40c6bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.0251575, y: 4.0251575}
+  m_Size: {x: 3.5555556, y: 3.5555556}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1598,7 +1866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743856972}
   - component: {fileID: 743856973}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,7 +1950,7 @@ GameObject:
   m_Component:
   - component: {fileID: 751257728}
   - component: {fileID: 751257729}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1766,7 +2034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 784448632}
   - component: {fileID: 784448633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1850,7 +2118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 798574578}
   - component: {fileID: 798574579}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,7 +2202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 819100095}
   - component: {fileID: 819100096}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2018,7 +2286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 826992025}
   - component: {fileID: 826992026}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2092,7 +2360,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &852141813
+--- !u!1 &884269532
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2100,37 +2368,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 852141814}
-  - component: {fileID: 852141815}
-  m_Layer: 0
-  m_Name: Sheep
+  - component: {fileID: 884269533}
+  - component: {fileID: 884269535}
+  - component: {fileID: 884269534}
+  m_Layer: 8
+  m_Name: pig head_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &852141814
+  m_IsActive: 0
+--- !u!4 &884269533
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852141813}
+  m_GameObject: {fileID: 884269532}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.68, y: -0.06, z: 0.37191027}
+  m_LocalPosition: {x: -6.3567495, y: -0.4432267, z: 0.37191027}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 74565034}
-  m_RootOrder: 2
+  m_Father: {fileID: 297799424}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &852141815
+--- !u!95 &884269534
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 884269532}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7144b1c513ebee438b18f21e88f9eea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &884269535
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852141813}
+  m_GameObject: {fileID: 884269532}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -2162,15 +2451,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: b340baf0ca861b246b6347c1da425dbb, type: 3}
+  m_SortingLayerID: -1725274357
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -405805687, guid: bcfbb861ee8ec7040a4c3d05070a5f85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.0251575, y: 4.0251575}
+  m_Size: {x: 3.2, y: 3.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2186,7 +2475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930543333}
   - component: {fileID: 930543334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2270,7 +2559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943944696}
   - component: {fileID: 943944697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2354,7 +2643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964084565}
   - component: {fileID: 964084566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2438,7 +2727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 967507335}
   - component: {fileID: 967507336}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2522,7 +2811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977181637}
   - component: {fileID: 977181638}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2606,7 +2895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985418341}
   - component: {fileID: 985418342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2690,7 +2979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 990201810}
   - component: {fileID: 990201811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2773,7 +3062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1015460039}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2825,7 +3114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051323771}
   - component: {fileID: 1051323772}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2909,7 +3198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115604363}
   - component: {fileID: 1115604364}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2993,7 +3282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1115987024}
   - component: {fileID: 1115987025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3067,90 +3356,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1119877468
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1119877469}
-  - component: {fileID: 1119877470}
-  m_Layer: 0
-  m_Name: Pig
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1119877469
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119877468}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.04, y: -0.26, z: 0.37191027}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 74565034}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1119877470
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119877468}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 9b9eaf286d37d9e49964e16dc1bab2ec, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.0251575, y: 4.0251575}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &1178103847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1178103848}
   - component: {fileID: 1178103849}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3245,7 +3450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1203271128}
   - component: {fileID: 1203271129}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3319,6 +3524,144 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1206427245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206427246}
+  m_Layer: 8
+  m_Name: Cow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1206427246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206427245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1421950761}
+  - {fileID: 1227789912}
+  m_Father: {fileID: 74565034}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1227789911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227789912}
+  - component: {fileID: 1227789914}
+  - component: {fileID: 1227789913}
+  m_Layer: 8
+  m_Name: cow head_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1227789912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227789911}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9367499, y: -0.17322671, z: 0.37191027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1206427246}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1227789913
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227789911}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 395136b3bc6b9154faf9915c22a5c211, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1227789914
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227789911}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1725274357
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -212407359, guid: e160fe8e260ed134fb09b1f7ba7291a2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.571429, y: 4.571429}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1247199402
 GameObject:
   m_ObjectHideFlags: 0
@@ -3329,7 +3672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1247199403}
   - component: {fileID: 1247199404}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3756,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294983520}
   - component: {fileID: 1294983521}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3497,7 +3840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1313079929}
   - component: {fileID: 1313079930}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3581,7 +3924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1316621193}
   - component: {fileID: 1316621194}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3665,7 +4008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355058000}
   - component: {fileID: 1355058001}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3749,7 +4092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357418206}
   - component: {fileID: 1357418207}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3839,7 +4182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1373908029
 Transform:
   m_ObjectHideFlags: 0
@@ -3907,6 +4250,111 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1421950760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1421950761}
+  - component: {fileID: 1421950763}
+  - component: {fileID: 1421950762}
+  m_Layer: 8
+  m_Name: cow sprite sheet_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1421950761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421950760}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1206427246}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1421950762
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421950760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 91387f8164ddf1e47a1387a7add511dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1421950763
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421950760}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1725274357
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 834784189, guid: bc7df17deec202d41bf20594c314f3e1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 3.2, y: 3.2}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1448227017
 GameObject:
   m_ObjectHideFlags: 0
@@ -3917,7 +4365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448227018}
   - component: {fileID: 1448227019}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4001,7 +4449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1449878932}
   - component: {fileID: 1449878933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4085,7 +4533,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543834853}
   - component: {fileID: 1543834854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4169,7 +4617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1578219937}
   - component: {fileID: 1578219938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4253,7 +4701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1590043960}
   - component: {fileID: 1590043961}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4337,7 +4785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1635086208}
   - component: {fileID: 1635086209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4421,7 +4869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1674062893}
   - component: {fileID: 1674062894}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4505,7 +4953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1723623742}
   - component: {fileID: 1723623743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4579,6 +5027,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1725422636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1725422637}
+  m_Layer: 8
+  m_Name: Sheep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725422637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725422636}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 257249422}
+  - {fileID: 281125314}
+  m_Father: {fileID: 74565034}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1747860733
 GameObject:
   m_ObjectHideFlags: 0
@@ -4589,7 +5070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747860734}
   - component: {fileID: 1747860735}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,7 +5154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1757468844}
   - component: {fileID: 1757468845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4757,7 +5238,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798371763}
   - component: {fileID: 1798371764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4841,7 +5322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1821310677}
   - component: {fileID: 1821310678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4925,7 +5406,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1887067123}
   - component: {fileID: 1887067124}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: "tr\xE6 2D pixel"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5009,7 +5490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1888335682}
   - component: {fileID: 1888335683}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky _bg_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5099,7 +5580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1920503485
 Transform:
   m_ObjectHideFlags: 0
@@ -5177,7 +5658,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1922085163}
   - component: {fileID: 1922085164}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5261,7 +5742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1934711935}
   - component: {fileID: 1934711936}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: titel sky (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5351,7 +5832,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1944279098
 Transform:
   m_ObjectHideFlags: 0
@@ -5429,7 +5910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953327648}
   - component: {fileID: 1953327649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5513,7 +5994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969904974}
   - component: {fileID: 1969904975}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5597,7 +6078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2013531135}
   - component: {fileID: 2013531136}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5681,7 +6162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048280248}
   - component: {fileID: 2048280249}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5765,7 +6246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2048705881}
   - component: {fileID: 2048705882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Grass with dirt 2D pixel 1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5855,7 +6336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2060560027
 Transform:
   m_ObjectHideFlags: 0
@@ -5933,7 +6414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079331494}
   - component: {fileID: 2079331495}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Just dirt 2D pixel (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6017,7 +6498,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2081832299}
   - component: {fileID: 2081832300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6101,7 +6582,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2100113459}
   - component: {fileID: 2100113460}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6185,7 +6666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2117782395}
   - component: {fileID: 2117782396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: title sky_bg (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
