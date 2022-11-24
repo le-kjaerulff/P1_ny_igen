@@ -46,11 +46,7 @@ public class Level2questionaire : MonoBehaviour
         B = (int)Random.Range(0, 3);
         C = (int)Random.Range(0, 3);
         }
-
-        
-        
-        
-        
+  
         Debug.LogFormat("A: {0}. B: {1}. C: {2}", A, B, C);
 
         previousA = A;
@@ -66,8 +62,6 @@ public class Level2questionaire : MonoBehaviour
         {
             itsTheSame = true;
         }
-
-
     }
 
 

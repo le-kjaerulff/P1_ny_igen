@@ -6,122 +6,83 @@ using UnityEngine;
 public class Level_1_Questionaire : MonoBehaviour
 {
 
-    [SerializeField] AudioSource audioPlayer;
-    [SerializeField] AudioClip[] audioClipArray;
-
     [SerializeField] string[] whatAnimal = new string[3]; 
     int rightAnswer;
     int userAnswer;
 
-
-    bool cowOnPlate;
-    bool pigOnPlate;
-    bool sheepOnPlate;
-
-    public GameManager gameManager;
+    bool cowWasPicked;
+    bool pigWasPicked;
+    bool sheepWasPicked;
 
 
     // Start is called before the first frame update
     void Start()
-    {     
-        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+    {
         AskQuestion();
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        cowOnPlate |= Input.GetKeyDown(KeyCode.LeftArrow);
-        pigOnPlate |= Input.GetKeyDown(KeyCode.UpArrow);
-        sheepOnPlate |= Input.GetKeyDown(KeyCode.RightArrow);
+        cowWasPicked |= Input.GetKeyDown(KeyCode.K);
+        pigWasPicked |= Input.GetKeyDown(KeyCode.G);
+        sheepWasPicked |= Input.GetKeyDown(KeyCode.F);
 
     }
 
     private void FixedUpdate()
     {
-        if (cowOnPlate)
+        if (cowWasPicked)
         {
-            CowWasPicked();
+            userAnswer = 0;
+            if (userAnswer == rightAnswer)
+            {
+                Debug.Log("GG");
+               
+            }
+            Debug.LogFormat("User answer: {0}", userAnswer);
+            Debug.LogFormat("Right answer: {0}", rightAnswer);
+            AskQuestion();
         }
 
-        if (pigOnPlate)
+        if (pigWasPicked)
         {
-            PigWasPicked();
+            userAnswer = 1;
+            if (userAnswer == rightAnswer)
+            {
+                Debug.Log("GG");
+             
+            }
+            Debug.LogFormat("User answer: {0}", userAnswer);
+            Debug.LogFormat("Right answer: {0}", rightAnswer);
+            AskQuestion();
         }
 
-        if (sheepOnPlate)
+        if (sheepWasPicked)
         {
-            SheepWasPicked();
+            userAnswer = 2;
+            if (userAnswer == rightAnswer)
+            {
+                Debug.Log("GG");
+            }
+            Debug.LogFormat("User answer: {0}", userAnswer);
+            Debug.LogFormat("Right answer: {0}", rightAnswer);
+            AskQuestion();
         }
-        cowOnPlate = false;
-        pigOnPlate = false;
-        sheepOnPlate = false;
+
+        cowWasPicked = false;
+        pigWasPicked = false;
+        sheepWasPicked = false; 
     }
 
         public void AskQuestion()
     {
-
-        rightAnswer = (int)Random.Range(0, 3);   
-        audioPlayer.clip = audioClipArray[rightAnswer];
-        audioPlayer.PlayOneShot(audioClipArray[3]);
-        audioPlayer.PlayDelayed(audioClipArray[3].length);       
-        
+        rightAnswer = (int)Random.Range(0, 3);
         Debug.LogFormat("Pick the {0}", whatAnimal[rightAnswer]);
-       
     }
 
-    void CowWasPicked()
-    {
-        userAnswer = 0;
 
-        if (userAnswer == rightAnswer)
-        {
-            Debug.Log("GG");
-            gameManager.playerScore += 1;
-        }
-        else
-        {
-            gameManager.numberOfErrorsInSet += 1;
-        }
-        gameManager.questionNumberInSet += 1;
-        AskQuestion();
-    }
-    
-    void PigWasPicked()
-    {
-        userAnswer = 1;
-
-
-        if (userAnswer == rightAnswer)
-        {
-            Debug.Log("GG");
-            gameManager.playerScore += 1;
-        }
-        else
-        {
-            gameManager.numberOfErrorsInSet += 1;
-        }
-        gameManager.questionNumberInSet += 1;
-        AskQuestion();
-    }
-
-    void SheepWasPicked()
-    {
-        userAnswer = 2;
-
-        if (userAnswer == rightAnswer)
-        {
-            Debug.Log("GG");
-            gameManager.playerScore += 1;
-        }
-        else
-        {
-            gameManager.numberOfErrorsInSet += 1;
-        }
-        gameManager.questionNumberInSet += 1;
-        AskQuestion();
-    }
 
 }
-
-
