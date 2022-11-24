@@ -6,15 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Mikkel.unity
     guid: 9c70f59267f5649caab0eb9bdb2f3fa0
   - enabled: 1
-    path: Assets/Scenes/Level 1 - mikkel.unity
-    guid: 95330593643414b10afd53a729c9fe41
-  - enabled: 1
     path: Assets/Scenes/Tutorialscene.unity
-    guid: 5f9fa1e744c0249f5a22565253daf5b3
+    guid: 9baae649d2af847e7be9002ac56d2741
+  - enabled: 1
+    path: Assets/Scenes/Level 1 - Mikkel.unity
+    guid: 01f46fc2884af4bd8b26bc7416c416fe
   m_configObjects: {}
