@@ -1375,7 +1375,7 @@ GameObject:
   - component: {fileID: 581966752}
   - component: {fileID: 581966751}
   m_Layer: 5
-  m_Name: "Dyrene p\xE5 h\xF8rerupg\xE5rd skygge"
+  m_Name: Game name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1562,7 +1562,7 @@ RectTransform:
   - {fileID: 1078366169}
   - {fileID: 316862830}
   m_Father: {fileID: 2071655120}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2824,11 +2824,7 @@ GameObject:
   - component: {fileID: 1526742638}
   - component: {fileID: 1526742637}
   m_Layer: 5
-<<<<<<< HEAD
   m_Name: game name shadow
-=======
-  m_Name: "Dyrene p\xE5 h\xF8rerupg\xE5rd orange"
->>>>>>> 3db41d2cc01784b0dc9175a6791bbc6f50b4ebf4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3014,11 +3010,7 @@ RectTransform:
   - {fileID: 1272207240}
   - {fileID: 56854293}
   m_Father: {fileID: 2071655120}
-<<<<<<< HEAD
   m_RootOrder: 1
-=======
-  m_RootOrder: 2
->>>>>>> 3db41d2cc01784b0dc9175a6791bbc6f50b4ebf4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4246,10 +4238,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 581966750}
-<<<<<<< HEAD
-=======
-  - {fileID: 635781522}
->>>>>>> 3db41d2cc01784b0dc9175a6791bbc6f50b4ebf4
   - {fileID: 1555337835}
   - {fileID: 635781522}
   - {fileID: 1702893778}
