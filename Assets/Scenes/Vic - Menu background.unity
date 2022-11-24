@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 581966752}
   - component: {fileID: 581966751}
   m_Layer: 5
-  m_Name: Game name
+  m_Name: "Dyrene p\xE5 h\xF8rerupg\xE5rd skygge"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1360,7 +1360,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1526742636}
   m_Father: {fileID: 2071655120}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1529,7 +1530,7 @@ RectTransform:
   - {fileID: 1078366169}
   - {fileID: 316862830}
   m_Father: {fileID: 2071655120}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2791,7 +2792,7 @@ GameObject:
   - component: {fileID: 1526742638}
   - component: {fileID: 1526742637}
   m_Layer: 5
-  m_Name: Game name (1)
+  m_Name: "Dyrene p\xE5 h\xF8rerupg\xE5rd orange"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,17 +2805,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526742635}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2071655120}
-  m_RootOrder: 1
+  m_Father: {fileID: 581966750}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: 30}
+  m_AnchoredPosition: {x: -18, y: 0}
   m_SizeDelta: {x: 1400, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526742637
@@ -2977,7 +2978,7 @@ RectTransform:
   - {fileID: 1272207240}
   - {fileID: 56854293}
   m_Father: {fileID: 2071655120}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3349,7 +3350,7 @@ RectTransform:
   - {fileID: 15442845}
   - {fileID: 267189691}
   m_Father: {fileID: 2071655120}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4206,7 +4207,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 581966750}
-  - {fileID: 1526742636}
   - {fileID: 635781522}
   - {fileID: 1555337835}
   - {fileID: 1702893778}
