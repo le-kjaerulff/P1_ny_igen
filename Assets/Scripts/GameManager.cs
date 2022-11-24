@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int score
+    public int playerScore
     {
         get { return _playerScore;
         }
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public int difficulty
+    public int difficultyLevel
     {
         get
         {
@@ -81,11 +81,11 @@ public class GameManager : MonoBehaviour
         {
             questionNumberInSet = 1;
             if (numberOfErrorsInSet == 0)
-            {
-               
-                difficulty += 1;
+            {              
+                difficultyLevel += 1;
+                numberOfErrorsInSet = 0;                
                 Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(1);
             }
         }
 
