@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     private int _questionNumberInSet;
     private int _numberOfErrorsInSet;
 
+    private int currentScene = 0;
+
     public int questionNumberInSet
     {
         get
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
        DontDestroyOnLoad(this.gameObject);
-
+     
             
     }
 
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
     {
         questionNumberInSet = 1;
         numberOfErrorsInSet = 0;
+
 
     }
 
@@ -85,11 +88,9 @@ public class GameManager : MonoBehaviour
                 difficultyLevel += 1;
                 numberOfErrorsInSet = 0;                
                 Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(currentScene += 1); 
             }
         }
-
     }
-
 
 }

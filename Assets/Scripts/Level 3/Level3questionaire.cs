@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level2questionaire : MonoBehaviour
+public class Level3questionaire : MonoBehaviour
 {
     public GameManager gameManager;
 
@@ -80,7 +80,7 @@ public class Level2questionaire : MonoBehaviour
         cow = GameObject.Find("Cow");
         pig = GameObject.Find("Pig");
         sheep = GameObject.Find("Sheep");
-  
+
         AskQuestion();
     }
 
@@ -92,12 +92,12 @@ public class Level2questionaire : MonoBehaviour
         pigOnPlate = Input.GetKeyDown(KeyCode.G);
         sheepOnPlate = Input.GetKeyDown(KeyCode.F);
         PositionUpdater();
-       
+
         if (shuffle)
         {
             AskQuestion();
         }
-        
+
         if (cowOnPlate)
         {
             UserAnswerCheck(cowPosition);
@@ -125,16 +125,16 @@ public class Level2questionaire : MonoBehaviour
     public void AskQuestion()
     {
         updatePrevious();
-        
-        cowPosition = (int)Random.Range(0, 4);
-        pigPosition = (int)Random.Range(0, 4);
-        sheepPosition = (int)Random.Range(0, 4);
+
+        cowPosition = (int)Random.Range(0, 8);
+        pigPosition = (int)Random.Range(0, 8);
+        sheepPosition = (int)Random.Range(0, 8);
         while (cowPosition == pigPosition || pigPosition == sheepPosition || sheepPosition == cowPosition ||
             cowPosition == previousCowPosition && pigPosition == previousPigPosition && sheepPosition == previousSheepPosition)
         {
-            cowPosition = (int)Random.Range(0, 4);
-            pigPosition = (int)Random.Range(0, 4);
-            sheepPosition = (int)Random.Range(0, 4);
+            cowPosition = (int)Random.Range(0, 8);
+            pigPosition = (int)Random.Range(0, 8);
+            sheepPosition = (int)Random.Range(0, 8);
         }
 
         currentConfig[0] = cowPosition;
@@ -142,7 +142,7 @@ public class Level2questionaire : MonoBehaviour
         currentConfig[2] = sheepPosition;
 
         positionAsked = currentConfig[(int)Random.Range(0, 3)];
-        
+
         Debug.LogFormat("Ko: {0}. Gris: {1}. Får: {2}", cowPosition, pigPosition, sheepPosition);
         Debug.LogFormat("Hvilket dyr er {0}?", positionSounds[positionAsked]);
     }
@@ -187,7 +187,7 @@ public class Level2questionaire : MonoBehaviour
             pigSprite.gameObject.SetActive(true);
         }
 
-        if (sheepPosition == 2 || sheepPosition == 6 )
+        if (sheepPosition == 2 || sheepPosition == 6)
         {
             sheepHeadSprite.gameObject.SetActive(true);
             sheepSprite.gameObject.SetActive(false);
@@ -240,7 +240,7 @@ public class Level2questionaire : MonoBehaviour
     {
         userAnswer = pickedAnimalPosition;
 
-        if(userAnswer == positionAsked)
+        if (userAnswer == positionAsked)
         {
             Debug.Log("Yuo are smart!");
             gameManager.playerScore += 1;
