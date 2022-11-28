@@ -11,7 +11,7 @@ public class finalScore : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        GameManager = GameObject.Find("score").GetComponent<GameManager>();
+        GameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
 
     }

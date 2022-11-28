@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
     private int _questionNumberInSet;
     private int _numberOfErrorsInSet;
 
-    private int currentScene = 0;
+    private int currentScene = 3;
+    
 
     public int questionNumberInSet
     {
@@ -83,13 +84,14 @@ public class GameManager : MonoBehaviour
         if (questionNumberInSet > 5)
         {
             questionNumberInSet = 1;
-            if (numberOfErrorsInSet == 0)
-            {              
-                difficultyLevel += 1;
-                numberOfErrorsInSet = 0;                
-                Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
-                SceneManager.LoadScene(currentScene += 1); 
-            }
+            SceneManager.LoadScene(currentScene += 1);
+            //if (numberOfErrorsInSet == 0)
+            //{              
+            //    difficultyLevel += 1;
+            //    numberOfErrorsInSet = 0;                
+            //    Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
+            //    SceneManager.LoadScene(currentScene += 1); 
+            //}
         }
     }
 

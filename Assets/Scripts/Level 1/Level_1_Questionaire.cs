@@ -28,17 +28,21 @@ public class Level_1_Questionaire : MonoBehaviour
         AskQuestion();
     }
 
-    // Update is called once per frame
+    
+    
+   
     void Update()
     {
-        cowOnPlate |= Input.GetKeyDown(KeyCode.LeftArrow);
-        pigOnPlate |= Input.GetKeyDown(KeyCode.UpArrow);
+            cowOnPlate |= Input.GetKeyDown(KeyCode.LeftArrow);
+    pigOnPlate |= Input.GetKeyDown(KeyCode.UpArrow);
         sheepOnPlate |= Input.GetKeyDown(KeyCode.RightArrow);
 
     }
 
     private void FixedUpdate()
     {
+ 
+
         if (cowOnPlate)
         {
             CowWasPicked();

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Level3questionaire : MonoBehaviour
 {
+    [SerializeField] AudioSource audioPlayer;
+    [SerializeField] AudioClip[] audioClipArray;
+
+
     public GameManager gameManager;
 
     GameObject cow;
@@ -84,13 +88,15 @@ public class Level3questionaire : MonoBehaviour
         AskQuestion();
     }
 
+
+
+
     // Update is called once per frame
     void Update()
     {
-        shuffle = Input.GetKeyDown(KeyCode.Space);
-        cowOnPlate = Input.GetKeyDown(KeyCode.K);
-        pigOnPlate = Input.GetKeyDown(KeyCode.G);
-        sheepOnPlate = Input.GetKeyDown(KeyCode.F);
+        cowOnPlate |= Input.GetKeyDown(KeyCode.LeftArrow);
+        pigOnPlate |= Input.GetKeyDown(KeyCode.UpArrow);
+        sheepOnPlate |= Input.GetKeyDown(KeyCode.RightArrow);
         PositionUpdater();
 
         if (shuffle)
@@ -142,6 +148,10 @@ public class Level3questionaire : MonoBehaviour
         currentConfig[2] = sheepPosition;
 
         positionAsked = currentConfig[(int)Random.Range(0, 3)];
+
+        audioPlayer.clip = audioClipArray[positionAsked];
+        audioPlayer.PlayOneShot(audioClipArray[8]);
+        audioPlayer.PlayDelayed(audioClipArray[8].length);
 
         Debug.LogFormat("Ko: {0}. Gris: {1}. Får: {2}", cowPosition, pigPosition, sheepPosition);
         Debug.LogFormat("Hvilket dyr er {0}?", positionSounds[positionAsked]);
