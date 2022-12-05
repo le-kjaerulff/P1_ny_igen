@@ -7,6 +7,9 @@ public class PlayerControls : MonoBehaviour
     QuestionsAudioPlayer questionsAudioPlayer;
     GameManager gameManager;
     UserAnswerChecker userAnswerChecker;
+    Animator cowAnimator;
+    Animator pigAnimator;
+    Animator sheepAnimator;
 
 
     //public bool cowWasPicked;                       // bools som er sande n�r deres respektive dyr st�r p� svar-pladen
@@ -18,6 +21,9 @@ public class PlayerControls : MonoBehaviour
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         questionsAudioPlayer = this.GetComponent<QuestionsAudioPlayer>();
         userAnswerChecker = this.GetComponent<UserAnswerChecker>();
+        cowAnimator = GameObject.Find("cow sprite sheet_0").GetComponent<Animator>();
+        pigAnimator = GameObject.Find("pig sprite sheet_0").GetComponent<Animator>();
+        sheepAnimator = GameObject.Find("sheep sprite sheet_0").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -44,7 +50,7 @@ public class PlayerControls : MonoBehaviour
                 default:
                     break;
             }
-
+            cowAnimator.SetTrigger("CowWasPicked");
             questionsAudioPlayer.PlayAnswerFeedback(0);
 
         }
@@ -64,9 +70,9 @@ public class PlayerControls : MonoBehaviour
                 default:
                     break;
             }
-
+            pigAnimator.SetTrigger("PigWasPicked");
             questionsAudioPlayer.PlayAnswerFeedback(1);
-
+            
         }
 
         if (gameManager.waitingForUserAnswer && !questionsAudioPlayer.audioPlayer.isPlaying && Input.GetKeyDown(KeyCode.RightArrow)) // Sheep picked
@@ -84,9 +90,9 @@ public class PlayerControls : MonoBehaviour
                 default:
                     break;
             }
-
+            sheepAnimator.SetTrigger("SheepWasPicked");
             questionsAudioPlayer.PlayAnswerFeedback(2);
-
+            
         }
     }
 

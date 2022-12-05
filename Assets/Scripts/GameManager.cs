@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     private int _playerScore = 0;
     private int _difficultyLevel;
-    private int _questionNumberInSet;
+    [SerializeField] int _questionNumberInSet;
     private int _numberOfErrorsInSet;
 
     public bool readyForNextQuestion;
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     void LevelProgression()
     {
-        if (questionNumberInSet > 5)
+        if (_questionNumberInSet > 5)
         {
             questionNumberInSet = 1;
             currentScene++;
@@ -104,7 +104,17 @@ public class GameManager : MonoBehaviour
             //    SceneManager.LoadScene(currentScene += 1); 
             //}
         }
+
+
+
+
+
+
     }
+
+
+
+
 
 
 }

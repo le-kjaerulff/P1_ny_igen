@@ -224,6 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab9514583a308b9498c5da37add98b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cowAnswerValue: 0
+  pigAnswerValue: 0
+  sheepAnswerValue: 0
 --- !u!114 &25287790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,15 +239,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a37f63d9f8c66f4fbec389c27198182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nounAsked: 0
+  positionAsked: 0
   whatAnimal:
   - 
   - 
   - 
-  verbumAsked: 0
-  cow: 0
-  pig: 1
-  sheep: 2
-  positionAsked: 0
 --- !u!114 &25287791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,9 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06260cef98482214aa2528a7c343c60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cowOnPlate: 0
-  pigOnPlate: 0
-  sheepOnPlate: 0
 --- !u!114 &25287792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,21 +320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 845662542}
-  prepositionQuestionSounds:
-  - {fileID: 8300000, guid: c33f8bfe00748496587257f560930b96, type: 3}
-  - {fileID: 8300000, guid: 696db0d4350de4dbba7a717b5d494a3f, type: 3}
-  - {fileID: 8300000, guid: 35e7a314cb8e0428bbfe3a6b1657e589, type: 3}
-  - {fileID: 8300000, guid: e0ea4ca7aae92486481ce8b87022107e, type: 3}
-  - {fileID: 8300000, guid: 18b8714c2f9f74516bfb75aa17e52d12, type: 3}
-  - {fileID: 8300000, guid: 1d3e69f3f2ed595439e165f11ac4efa6, type: 3}
-  - {fileID: 8300000, guid: 8d84148e0344a49cbae9aec6d06401e8, type: 3}
-  - {fileID: 8300000, guid: db3704f85641d4db4bc197f7e7eb23e5, type: 3}
-  - {fileID: 8300000, guid: d05af6543878f40ef96fe29bd32c4c5a, type: 3}
-  VerbQuestionSounds:
-  - {fileID: 8300000, guid: 8bebfca11411a004fad792e1b7a93927, type: 3}
-  - {fileID: 8300000, guid: dba7c0f6986217a47933ef79a14d0c30, type: 3}
-  - {fileID: 8300000, guid: 8a907fad0c67f5b47b897a08303e6053, type: 3}
-  - {fileID: 8300000, guid: c4a165d2e5e4c19449a654b745fc8290, type: 3}
 --- !u!1 &74565033
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &257249422
 Transform:
   m_ObjectHideFlags: 0
@@ -1882,7 +1864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &702976649
 Transform:
   m_ObjectHideFlags: 0
