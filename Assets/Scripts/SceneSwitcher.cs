@@ -5,34 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    public int mainMenu = 0;
+    public int tutorial = 1;
+    public int options = 2;
+    public int level_1 = 3;
+   
+
     public void playGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(level_1);
     }
 
-    public void Back()
+    public void goToMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(mainMenu);
     }
-    public void playNextScene()
+    public void playTutorial()
     {
-        SceneManager.LoadScene(1);
-    }
-
-    public void playPreviousScene()
-    {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(tutorial);
     }
 
-    public void playThirdScene()
+    public void goToOptions()
 
     {
-        SceneManager.LoadScene(2);
-    }
-
-    public void PlayThreeScenesBack()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+        SceneManager.LoadScene(options);
     }
 
 }
+
+

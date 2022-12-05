@@ -922,7 +922,10 @@ GameObject:
   - component: {fileID: 212591723}
   - component: {fileID: 212591722}
   - component: {fileID: 212591721}
-  - component: {fileID: 212591724}
+  - component: {fileID: 212591725}
+  - component: {fileID: 212591726}
+  - component: {fileID: 212591729}
+  - component: {fileID: 212591728}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -996,7 +999,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &212591724
+--- !u!114 &212591725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1005,20 +1008,58 @@ MonoBehaviour:
   m_GameObject: {fileID: 212591720}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e8e0d473ae6b843a084668ade274a0, type: 3}
+  m_Script: {fileID: 11500000, guid: ab9514583a308b9498c5da37add98b8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowAnswerValue: 0
+  pigAnswerValue: 0
+  sheepAnswerValue: 0
+--- !u!114 &212591726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212591720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06260cef98482214aa2528a7c343c60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cowOnPlate: 0
+  pigOnPlate: 0
+  sheepOnPlate: 0
+--- !u!114 &212591728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212591720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d650d5c7de6f2884fb85e2ac58c95a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 1194556258}
-  audioClipArray:
-  - {fileID: 8300000, guid: 8bebfca11411a004fad792e1b7a93927, type: 3}
-  - {fileID: 8300000, guid: dba7c0f6986217a47933ef79a14d0c30, type: 3}
-  - {fileID: 8300000, guid: 8a907fad0c67f5b47b897a08303e6053, type: 3}
-  - {fileID: 8300000, guid: c4a165d2e5e4c19449a654b745fc8290, type: 3}
+--- !u!114 &212591729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212591720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a37f63d9f8c66f4fbec389c27198182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nounAsked: 0
+  positionAsked: 0
   whatAnimal:
   - cow
   - pig
   - sheep
-  gameManager: {fileID: 0}
 --- !u!1 &216300773
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e32800895e05b42bbd02dba0e70a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentScene: 0
 --- !u!4 &900984114
 Transform:
   m_ObjectHideFlags: 0
@@ -5938,7 +5980,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
