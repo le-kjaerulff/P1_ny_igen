@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     private int _playerScore = 0;
     private int _difficultyLevel;
-    private int _questionNumberInSet;
+    [SerializeField] int _questionNumberInSet;
     private int _numberOfErrorsInSet;
 
-    private int currentScene = 0;
+    public bool readyForNextQuestion;
+    public bool waitingForUserAnswer;
 
     public int questionNumberInSet
     {
@@ -33,10 +35,9 @@ public class GameManager : MonoBehaviour
         set
         {
            _numberOfErrorsInSet = value;
-            Debug.LogFormat("Errors: {0}", _numberOfErrorsInSet);
+           // Debug.LogFormat("Errors: {0}", _numberOfErrorsInSet);
         }
     }
-
     public int playerScore
     {
         get { return _playerScore;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
         set
         {
             _playerScore = value;
-            Debug.LogFormat("Score: {0}", _playerScore);
+           // Debug.LogFormat("Score: {0}", _playerScore);
         }
     }
 
@@ -60,37 +61,60 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Dictionary<int, string> questionTypeForScene = new Dictionary<int, string>()
+    {
+        {3, "noun" },
+        {4, "preposition"},
+        {5, "preposition"},
+    };
+
+    public int currentScene;
 
     private void Awake()
     {
        DontDestroyOnLoad(this.gameObject);
-     
-            
+       currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
 
     private void Start()
-    {
+    {      
         questionNumberInSet = 1;
         numberOfErrorsInSet = 0;
-
-
     }
 
 
     private void Update()
     {
-        if (questionNumberInSet > 5)
+        LevelProgression();
+    }
+
+    void LevelProgression()
+    {
+        if (_questionNumberInSet > 5)
         {
             questionNumberInSet = 1;
-            if (numberOfErrorsInSet == 0)
-            {              
-                difficultyLevel += 1;
-                numberOfErrorsInSet = 0;                
-                Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
-                SceneManager.LoadScene(currentScene += 1); 
-            }
+            currentScene++;
+            SceneManager.LoadScene(currentScene);
+            //if (numberOfErrorsInSet == 0)
+            //{              
+            //    difficultyLevel += 1;
+            //    numberOfErrorsInSet = 0;                
+            //    Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
+            //    SceneManager.LoadScene(currentScene += 1); 
+            //}
         }
+
+
+
+
+
+
     }
+
+
+
+
+
 
 }
