@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class PositionRandomizer : MonoBehaviour
 {
-    GameObject cow;                                 // gameobjects til at flytte dyrene
+    GameObject cow;                                             // gameobjects til at flytte dyrene
     GameObject pig;
     GameObject sheep;
 
-    public GameObject cowSprite;                    // gameobjects til at skifte ml. hele dyr og hoveder
+    public GameObject cowSprite;                                // gameobjects til at skifte ml. hele dyr og hoveder
     public GameObject pigSprite;
     public GameObject sheepSprite;
     public GameObject cowHeadSprite;
     public GameObject pigHeadSprite;
     public GameObject sheepHeadSprite;
 
-    public int cowPosition;                                // Int variabler som holder styr på index-numre for dyrenes aktuelle vector2 positioner
+    public int cowPosition;                                     // Int variabler som holder styr på index-numre for dyrenes aktuelle vector2 positioner
     public int pigPosition;
     public int sheepPosition;
 
-    int previousCowPosition;                        // Int variabler som holder styr på index-numre for dyrenes forgående vector2 positioner
+    int previousCowPosition;                                     // Int variabler som holder styr på index-numre for dyrenes forgående vector2 positioner
     int previousPigPosition;
     int previousSheepPosition;
-
-    public int[] currentConfig = new int[3];        // int-array som gemmer de tre index-numre for dyrenes aktuelle vector2 positioner
+        
+    public int[] currentConfig = new int[3];                    // int-array som gemmer de tre index-numre for dyrenes aktuelle vector2 positioner
 
     public int numberOfPossiblePositions;
 
@@ -37,8 +37,7 @@ public class PositionRandomizer : MonoBehaviour
         new Vector2( 0, 0),
         new Vector2( 0, 0),
         new Vector2( 0, 0)
-    };  //vector2 arrays som holder alle mulige positioner for de tre dyr
-
+    };     //vector2 arrays som holder alle mulige positioner for de tre dyr
     public Vector2[] possiblePigPositions = new Vector2[]
  {
         new Vector2( 0, 0),
@@ -50,7 +49,6 @@ public class PositionRandomizer : MonoBehaviour
         new Vector2( 0, 0),
         new Vector2( 0, 0)
  };
-
     public Vector2[] possibleSheepPositions = new Vector2[]
  {
         new Vector2( 0, 0),      // [0] foran
@@ -63,9 +61,6 @@ public class PositionRandomizer : MonoBehaviour
         new Vector2( 0, 0)
  };
 
-
-
-    // Start is called before the first frame update
     void Awake()
     {
         cow = GameObject.Find("Cow");           // dyrenes parent objects findes og gemmes
@@ -74,7 +69,6 @@ public class PositionRandomizer : MonoBehaviour
         RandomizePositions();
     }
 
-    // Update is called once per frame
     void Update()
     {
         PositionUpdater();
@@ -86,36 +80,32 @@ public class PositionRandomizer : MonoBehaviour
     {
         UpdatePrevious();
 
-        cowPosition = (int)Random.Range(0, numberOfPossiblePositions);  // tilfældige tal ml. 0 og 7, svarende til vector2 arrays'snes indexnumre, tilskrives til de tre positionsvariabler. 
+        cowPosition = (int)Random.Range(0, numberOfPossiblePositions);  
         pigPosition = (int)Random.Range(0, numberOfPossiblePositions);
         sheepPosition = (int)Random.Range(0, numberOfPossiblePositions);
         while (cowPosition == pigPosition || pigPosition == sheepPosition || sheepPosition == cowPosition ||
-            cowPosition == previousCowPosition && pigPosition == previousPigPosition && sheepPosition == previousSheepPosition) // hvis nogle af dyrene får det samme tal, eller alle positioner er de samme som 
-                                                                                                                                // i foregående spørgsmål, tilskrives nye tilfældige værdier.
+            cowPosition == previousCowPosition && pigPosition == previousPigPosition && sheepPosition == previousSheepPosition) 
         {
             cowPosition = (int)Random.Range(0, numberOfPossiblePositions);
             pigPosition = (int)Random.Range(0, numberOfPossiblePositions);
             sheepPosition = (int)Random.Range(0, numberOfPossiblePositions);
         }
 
-        currentConfig[0] = cowPosition;     // currentconfig arrayet opdateres med de nye positioner
+        currentConfig[0] = cowPosition;    
         currentConfig[1] = pigPosition;
         currentConfig[2] = sheepPosition;
-
-        //Debug.LogFormat("Ko: {0}. Gris: {1}. Får: {2}", cowPosition, pigPosition, sheepPosition);
-
     }
 
-    public void UpdatePrevious()    // gemmer de tidligere positioner inden de overskrives med nye positioner
+    public void UpdatePrevious() 
     {
         previousCowPosition = cowPosition;
         previousPigPosition = pigPosition;
         previousSheepPosition = sheepPosition;
     }
 
-    void PositionUpdater()          // Opdaterer dyrenes positioner ved at tage det tal de hver især får tilskrevet tilfældigt, og sætte dem ind som index-numre i dyrenes egne vector2 arrays. 
+    void PositionUpdater()          
     {
-        cow.GetComponent<Transform>().position = possibleCowPositions[cowPosition]; // alle disse er vector2-værdier
+        cow.GetComponent<Transform>().position = possibleCowPositions[cowPosition]; 
         pig.GetComponent<Transform>().position = possiblePigPositions[pigPosition];
         sheep.GetComponent<Transform>().position = possibleSheepPositions[sheepPosition];
     }
@@ -126,7 +116,6 @@ public class PositionRandomizer : MonoBehaviour
         {
             cowHeadSprite.gameObject.SetActive(true);
             cowSprite.gameObject.SetActive(false);
-
         }
         else
         {
@@ -138,7 +127,6 @@ public class PositionRandomizer : MonoBehaviour
         {
             pigHeadSprite.gameObject.SetActive(true);
             pigSprite.gameObject.SetActive(false);
-
         }
         else
         {
@@ -150,18 +138,12 @@ public class PositionRandomizer : MonoBehaviour
         {
             sheepHeadSprite.gameObject.SetActive(true);
             sheepSprite.gameObject.SetActive(false);
-
         }
         else
         {
             sheepHeadSprite.gameObject.SetActive(false);
             sheepSprite.gameObject.SetActive(true);
         }
-
-
-
-
-
     }
 
     void LayerUpdater()
@@ -169,7 +151,6 @@ public class PositionRandomizer : MonoBehaviour
         if (cowPosition == 3 || cowPosition == 7)
         {
             cowSprite.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
-
         }
         else
         {
@@ -189,13 +170,11 @@ public class PositionRandomizer : MonoBehaviour
         if (sheepPosition == 3 || sheepPosition == 7)
         {
             sheepSprite.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
-
         }
         else
         {
             sheepSprite.GetComponent<SpriteRenderer>().sortingLayerName = "forgrund";
         }
-
     }
 }
 

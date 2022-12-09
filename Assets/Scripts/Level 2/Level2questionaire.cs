@@ -256,10 +256,10 @@ public class Level2questionaire : MonoBehaviour
             Debug.Log("Yuo are smart!");
             gameManager.playerScore += 1;
         }
-        else
-        {
-            gameManager.numberOfErrorsInSet += 1;
-        }
+        //else
+        //{
+        //    gameManager.numberOfErrorsInSet += 1;
+        //}
         gameManager.questionNumberInSet += 1;
         AskQuestion();
     }

@@ -5,116 +5,61 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    private int _playerScore = 0;
-    private int _difficultyLevel;
-    [SerializeField] int _questionNumberInSet;
-    private int _numberOfErrorsInSet;
-
-    public bool readyForNextQuestion;
-    public bool waitingForUserAnswer;
-
+    private int PlayerScore = 0; 
+    public int QuestionNumberInSet;         // HUSK AT ÆNDRE TILBAGE TIL PRIVATE!!!
+    public bool waitingForUserAnswer;       
     public int questionNumberInSet
     {
         get
         {
-            return _questionNumberInSet;
+            return QuestionNumberInSet;
         }
         set
         {
-            _questionNumberInSet = value;
-            Debug.LogFormat("This is question number {0}", _questionNumberInSet);
-        }
-    }
-    public int numberOfErrorsInSet
-    {
-        get
-        {
-            return _numberOfErrorsInSet;
-        }
-        set
-        {
-           _numberOfErrorsInSet = value;
-           // Debug.LogFormat("Errors: {0}", _numberOfErrorsInSet);
+            QuestionNumberInSet = value;
         }
     }
     public int playerScore
     {
-        get { return _playerScore;
+        get { return PlayerScore;
         }
         set
         {
-            _playerScore = value;
-           // Debug.LogFormat("Score: {0}", _playerScore);
+            PlayerScore = value;
         }
     }
-
-    public int difficultyLevel
-    {
-        get
-        {
-            return _difficultyLevel;
-        }
-        set
-        {
-            _difficultyLevel = value;
-        }
-    }
-
     public Dictionary<int, string> questionTypeForScene = new Dictionary<int, string>()
     {
         {3, "noun" },
         {4, "preposition"},
         {5, "preposition"},
     };
-
     public int currentScene;
-
     private void Awake()
     {
        DontDestroyOnLoad(this.gameObject);
        currentScene = SceneManager.GetActiveScene().buildIndex;
     }
-
-
-    private void Start()
-    {      
-        questionNumberInSet = 1;
-        numberOfErrorsInSet = 0;
-    }
-
-
     private void Update()
     {
-        LevelProgression();
+        LevelProgressTracker();
     }
-
-    void LevelProgression()
+    void LevelProgressTracker()
     {
-        if (_questionNumberInSet > 5)
+        if (QuestionNumberInSet > 5)
         {
-            questionNumberInSet = 1;
-            currentScene++;
-            SceneManager.LoadScene(currentScene);
-            //if (numberOfErrorsInSet == 0)
-            //{              
-            //    difficultyLevel += 1;
-            //    numberOfErrorsInSet = 0;                
-            //    Debug.LogFormat("Difficulty is now: {0}", _difficultyLevel);
-            //    SceneManager.LoadScene(currentScene += 1); 
-            //}
+           questionNumberInSet = 0;
+           waitingForUserAnswer = false;
+            if (currentScene == 5)
+            {
+                currentScene = (int)Random.Range(6, 8);
+                SceneManager.LoadScene(currentScene);
+            }
+            else
+            {
+                currentScene++;
+                SceneManager.LoadScene(currentScene);
+            }
         }
-
-
-
-
-
-
     }
-
-
-
-
-
-
 }

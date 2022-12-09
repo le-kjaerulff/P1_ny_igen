@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level3questionaire : MonoBehaviour
 {
     GameManager gameManager;                        // GamemManager class 
-    PlayerControls playerControls;
+    GameControls playerControls;
     //QuestionsAudioPlayer questionsAudioPlayer;
 
     GameObject cow;                                 // gameobjects til at flytte dyrene
@@ -76,7 +76,7 @@ public class Level3questionaire : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();  // spillets gamemanager object findes og gemmes
-        playerControls = this.GetComponent<PlayerControls>();
+        playerControls = this.GetComponent<GameControls>();
         //questionsAudioPlayer = this.GetComponent<QuestionsAudioPlayer>();
         cow =   GameObject.Find("Cow");                                               // dyrenes parent objects findes og gemmes
         pig =   GameObject.Find("Pig");
