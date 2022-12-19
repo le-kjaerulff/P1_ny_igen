@@ -83,10 +83,10 @@ public class Level_1_Questionaire_Vic : MonoBehaviour
             Debug.Log("GG");
             gameManager.playerScore++; // += 1, er erstattet med ++, det er huritgere at skrive.
         }
-        else
-        {
-            gameManager.numberOfErrorsInSet++;
-        }
+        //else
+        //{
+        //    gameManager.numberOfErrorsInSet++;
+        //}
         gameManager.questionNumberInSet++;
         AskQuestion();
     }
